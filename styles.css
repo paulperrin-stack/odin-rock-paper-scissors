@@ -1,0 +1,51 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background: #f0f4f8;
+    margin: 0;
+    padding: 2rem;
+}
+
+h1 {
+    color: #333
+}
+
+.score {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+button {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border: 2px solid #555;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button.hover {
+    background: #e0e0e0;
+    transform: scale(1.05);
+}
+
+button.btn-rock { background: #ff6b6b; color: white; }
+button.btn-paper { background: #4ecdc4; color: white; }
+button.btn-scissors { background: #45b7b1; color: white; }
+
+.message {
+    font-size: 1.4rem;
+    min-height: 3rem;
+    margin: 2rem 0;
+    color: #444;
+}
