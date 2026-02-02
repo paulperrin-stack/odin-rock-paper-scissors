@@ -5,8 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odin Rock Paper Scissors</title>
     <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <main>
+        <h1>Rock Paper Scissors</h1>
+
+        <section class="score">
+            <div>
+                <p>Player</p>
+                <div class="scoreHuman">0</div>
+            </div>
+            <div>
+                <p>Computer</p>
+                <div class="scoreComputer">0</div>
+            </div>
+        </section>
+
+        <section class="narrative">
+            <div class="message">Click a button to make your choice!</div>
+        </section>
+
+        <section class="choices">
+            <button class="btn btn-rock" data-choice="rock">Rock</button>
+            <button class="btn btn-paper" date-choice="paper">Paper</button>
+            <button class="btn btn-scissors" data-choice="scissors">Scissors</button>
+        </section>
+    </main>
 </body>
 </html>
