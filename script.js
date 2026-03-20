@@ -2,7 +2,7 @@
 const resultDiv = document.querySelector('.message');
 const humanScoreEl = document.querySelector('.scoreHuman');
 const computerScoreEl = document.querySelector('.scoreComputer');
-const buttons = document.querySelectorAll('.choiceHuman button');
+const buttons = document.querySelectorAll('.choices button');
 
 // Game state
 let humanScore = 0;
@@ -22,31 +22,26 @@ function playRound(humanChoice, computerChoice) {
     computerChoice = computerChoice.toLowerCase();
 
     // Show what was played (nice feedback)
-    resultDiv.textContent = `You chose ${humanChoice} - Computer chose ${computerChoice}.`;
-
     if (humanChoice === computerChoice) {
-        resultDiv.textContent += "It's a tie!";
+        resultDiv.textContent = `You both chose ${humanChoice}. It's a tie!`;
         return;
     }
 
     let winnerMessage;
-    let winner = null;
 
     if (
-        (humanChoice === 'rock' && computerChoice === 'scissors') ||
-        (humanChoice === 'paper' && computerChoice === 'rock') ||
-        (humanChoice === 'scissors' && computerChoice === 'scissors')
+        (humanChoice === 'rock'     && computerChoice === 'scissors')   ||
+        (humanChoice === 'paper'    && computerChoice === 'rock')       ||
+        (humanChoice === 'scissors' && computerChoice === 'paper')
     ) {
         humanScore++;
-        winner = 'human';
-        winnerMessage = `${humanChoice} beats ${computerChoice}. You win this round!`;
+        winnerMessage = `You! ${humanChoice} beats ${computerChoice}`;
     } else {
         computerScore++;
-        winner = 'computer';
-        winnerMessage = `${computerChoice} beats ${humanChoice}. Computer wins this round!`;
+        winnerMessage = `Computer wins! ${computerChoice} beats ${humanChoice}`;
     }
 
-    resultDiv.textContent += winnerMessage;
+    resultDiv.textContent = `You chose ${humanChoice}, computer chose ${computerChoice}. ${winnerMessage}`;
 
     // Update visible scores
     humanScoreEl.textContent = humanScore;

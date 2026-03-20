@@ -39,13 +39,22 @@ button.hover {
     transform: scale(1.05);
 }
 
-button.btn-rock { background: #ff6b6b; color: white; }
-button.btn-paper { background: #4ecdc4; color: white; }
-button.btn-scissors { background: #45b7b1; color: white; }
+button.btn-rock     { background: #e74c3c; color: white; }
+button.btn-paper    { background: #3498db; color: white; }
+button.btn-scissors { background: #f39c12; color: white; }
 
 .message {
     font-size: 1.4rem;
     min-height: 3rem;
     margin: 2rem 0;
     color: #444;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.btn:active {
+    transform: scale(0.95);
 }
